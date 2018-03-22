@@ -1,0 +1,133 @@
+folder:F:\ECs Data\¸ßÓıÓı\2018.1.21\N-600¡æ-2-0.00340g\CV
+
+Tech=cv  
+ei=0
+eh=1
+el=0
+v=0.2
+cl=10
+sens= 1e-1
+run
+save: IntialTest
+
+v=0.005
+cl=6
+sens= 1e-2
+run
+save: cv5
+
+v=0.01
+cl=6
+sens= 1e-2
+run
+save: cv10
+
+v=0.02
+cl=6
+sens= 1e-1
+run
+save: cv20
+
+v=0.03
+sens= 1e-1
+run
+save: cv30
+
+v=0.05
+sens= 1e-1
+run
+save: cv50 
+
+v=0.08
+sens= 1e-1
+run
+save: cv80 
+
+v=0.1
+sens= 1e-1
+run
+save: cv100 
+
+v=0.15
+sens= 1e-1
+run
+save: cv150
+
+v=0.2
+sens= 1e-1
+run
+save: cv200
+
+v=0.3
+sens= 1e-1
+run
+save: cv300
+
+v=0.4
+sens= 1e-1
+run
+save: cv400 
+
+
+Tech=cp
+ic=0.00136
+ia=0.00136
+eh=1
+el=0
+pn=n
+si=0.01
+cl=5
+run
+save: cp0P5
+
+ic=0.00272
+ia=0.00272
+run
+save: cp1
+
+ic=0.00544
+ia=0.00544
+run
+save: cp2  
+
+ic=0.00816
+ia=0.00816
+run
+save: cp3
+
+ic=0.0136
+ia=0.0136
+run
+save: cp5
+
+ic=0.02176
+ia=0.02176
+run
+save: cp8
+
+ic=0.0272
+ia=0.0272
+run
+save: cp10
+
+ic=0.0408
+ia=0.0408
+run
+save: cp15
+
+ic=0.0544
+ia=0.0544
+run
+save: cp20
+
+ic=0.1088
+ia=0.1088
+run
+save: cp40
+
+ic=0.1632
+ia=0.1632
+run
+save: cp60
+
+
