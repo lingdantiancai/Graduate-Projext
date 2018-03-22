@@ -29,7 +29,7 @@ def findpoint(y):		#设定一个函数来寻找图像中第二个最小点
 '''		
 def findpoint(y):#另外一种寻找中值最小点的方式
 	i = int(len(y)/2)#直接切入数据的中间，然后查看该数据旁边两个数据的大小。
-	#print (i,y[i])#然后向数据缩小的方向寻找最小值
+	print (i,y[i])#然后向数据缩小的方向寻找最小值
 	if y[i]<y[i+1] and y[i]<y[i-1]:
 		return i
 	elif y[i]<y[i+1]:
@@ -46,7 +46,7 @@ def drawing(xlabel,ylabel,title,label):#获取该文件中需要进行绘图的�
 
 	x,y = np.loadtxt('cache.txt', delimiter=',', unpack=True) #读取文件，以逗号为界点，获取参数点	
 	p = findpoint(y)		#从findpoint函数中获取最小点位置列表
-	#print (p,y[p-2],y[p-1],y[p])#显示最小值以及旁边的两个数据
+	print (p,y[p-2],y[p-1],y[p])
 	#plt.plot(x[p[1]:],y[p[1]:],label=filename[:4],linewidth = 1,color='black') #以找到的第二个最小点为分界点画图；x[p[1]:]表示最小点以后的数据
 	
 	return x[p-1:],y[p-1:]
@@ -55,18 +55,18 @@ def drawing(xlabel,ylabel,title,label):#获取该文件中需要进行绘图的�
 
 #os.listdir('.')遍历文件夹内的每个文件名，并返回一个包含文件名的list
 for file in os.listdir('.'):
+
     if file[-3: ] == 'txt' and file[:5] != 'cache':
-		
+
     	#filetype=os.path.splitext(file)[1]
-    	filename=os.path.splitext(file)[0] #获取文件原名
-    	print(filename[2:])
+    	#filename=os.path.splitext(file)[0] #获取文件原名
     	file = ''.join(file.split())
     	getValue(file)
     	x,y=drawing('Time/sec','Potential/V',file,file)
     	#print(x[1]) 获取每一个图像的起始时间值，并将其置0
-    	#print(file)
-    	plt.plot(x-x[0],y,label="%s A/g"%(filename[2:]),linewidth = 1,color=colors[i])
-    	print(file)	
+    	print(file)
+    	plt.plot(x-x[0],y,label=file,linewidth = 1,color=colors[i])
+    		
     else:
     	continue
     i = i+1
