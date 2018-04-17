@@ -1,0 +1,192 @@
+folder:F:\ECs Data\Liufangyan\M+Lignin\20180413\1000
+
+Tech=imp
+ei=0
+fl=0.01
+fh=100000
+run
+save: EIS
+
+Tech=cv  
+ei=-1
+eh=0
+el=-1
+sens= 1e-1
+cl=6
+
+v=0.005
+cl=6
+sens= 1e-1
+run
+save: cv5
+
+v=0.01
+cl=6
+sens= 1e-1
+run
+save: cv10
+
+v=0.02
+cl=6
+sens= 1e-1
+run
+save: cv20
+
+v=0.03
+sens= 1e-1
+run
+save: cv30
+
+v=0.05
+sens= 1e-1
+run
+save: cv50 
+
+v=0.08
+sens= 1e-1
+run
+save: cv80 
+
+v=0.1
+sens= 1e-1
+run
+save: cv100 
+
+v=0.2
+sens= 1e-1
+run
+save: cv200
+
+v=0.3
+sens= 1e-1
+run
+save: cv300
+
+v=0.4
+sens= 1e-1
+run
+save: cv400
+
+
+v=0.5
+sens= 1e-1
+run
+save: cv500
+
+v=0.6
+sens= 1e-1
+run
+save: cv600
+
+v=0.8
+sens= 1e-1
+run
+save: cv800
+
+v=1
+sens= 1e-1
+run
+save: cv1000
+
+
+Tech=cp
+eh=0
+el=-1
+pn=n
+si=0.01
+cl=7
+
+
+ic=0.00074
+ia=0.00074
+run
+save:cp0.5
+
+ic=0.00148
+ia=0.00148
+run
+save:cp1
+
+ic=0.00296
+ia=0.002960
+run
+save:cp2
+
+
+ic=0.00444
+ia=0.00444
+run
+save:cp3
+
+
+ic=0.0074
+ia=0.007400
+run
+save:cp5
+
+Tech=cp
+eh=0.8
+el=-0.2
+pn=n
+si=0.001
+cl=5
+
+ic=0.01184
+ia=0.011840
+run
+save:cp8
+
+
+ic=0.0148
+ia=0.014800
+run
+save:cp10
+
+
+ic=0.0222
+ia=0.0222
+run
+save:cp15
+
+
+ic=0.0296
+ia=0.0296
+run
+save:cp20
+
+
+ic=0.0444
+ia=0.0444
+run
+save:cp30
+
+
+ic=0.0592
+ia=0.0592
+run
+save:cp40
+
+
+ic=0.074
+ia=0.074
+run
+save:cp50
+
+
+ic=0.0888
+ia=0.0888
+run
+save:cp60
+
+
+ic=0.1184
+ia=0.1184
+run
+save:cp80
+
+
+ic=0.148
+ia=0.148
+run
+save:cp100
+
