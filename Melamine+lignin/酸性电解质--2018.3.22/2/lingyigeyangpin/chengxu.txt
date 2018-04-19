@@ -1,0 +1,89 @@
+folder:F:\ECs Data\Liufangyan\M+Lignin\20180329-ËáĞÔ\2\lingyigeyangpin
+
+
+
+Tech=cv  
+ei=-0.2
+eh=0.8
+el=-0.2
+sens= 1e-1
+
+
+v=0.1
+cl=10
+sens= 1e-1
+run
+save: cv100-1
+
+Tech=imp
+ei=0.52
+fl=0.01
+fh=100000
+run
+save: EIS
+
+Tech=cv  
+ei=-0.2
+eh=0.8
+el=-0.2
+sens= 1e-1
+cl=6
+
+v=0.005
+cl=6
+sens= 1e-1
+run
+save: cv5
+
+v=0.01
+cl=6
+sens= 1e-1
+run
+save: cv10
+
+v=0.02
+cl=6
+sens= 1e-1
+run
+save: cv20
+
+v=0.03
+sens= 1e-1
+run
+save: cv30
+
+v=0.05
+sens= 1e-1
+run
+save: cv50 
+
+v=0.08
+sens= 1e-1
+run
+save: cv80 
+
+v=0.1
+sens= 1e-1
+run
+save: cv100 
+
+v=0.2
+sens= 1e-1
+run
+save: cv200
+
+v=0.3
+sens= 1e-1
+run
+save: cv300
+
+v=0.4
+sens= 1e-1
+run
+save: cv400
+
+
+v=0.5
+sens= 1e-1
+run
+save: cv500

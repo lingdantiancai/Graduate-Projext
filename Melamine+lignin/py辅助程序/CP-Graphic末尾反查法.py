@@ -8,7 +8,7 @@ import os
 i = 0	#搭配选择颜色的参数
 colors = ['red','aqua','black','blue','brown','cyan','darkred','firebrick','green','ivory','magenta','brown','darkgoldenrod','darkslategray','blanchedalmond','dimgray','khaki','lightcoral']#这是一个颜色库，后面画图会使用
 #获取文件，剔除掉没用的字符，将数据缓存在新建文本里面进行操作
-path = 'C:/Users/lingd/Google Drive/毕业设计/毕业设计/实验数据/Graduate-Projext/Melamine+lignin/碱性电解质--KOH六摩尔每升/2018.3.22--3/cp'
+path = 'C:/Users/lingd/Google Drive/毕业设计/毕业设计/实验数据/Graduate-Projext/Melamine+lignin/20180413/1000-碱性/CP'
 #path = 'C:/Users/lingd/Google Drive/毕业设计/毕业设计/实验数据/Graduate-Projext/Melamine+lignin/py辅助程序'
 def getValue(filename):
 	cache = open('cache.txt','w')
@@ -69,9 +69,9 @@ def drawing(xlabel,ylabel,title,label):#获取该文件中需要进行绘图的�
 
 
 #建立一个独立的文件夹，将处理后的数据放在这里面
-folder = os.path.exists('Precessed-data')  
+folder = os.path.exists('%s/Precessed-data'%(path))  
 if not folder:                   #判断是否存在文件夹如果不存在则创建为文件夹  
-    os.makedirs('Precessed-data')            #makedirs 创建文件时如果路径不存在会创建这个路径  
+    os.makedirs('%s/Precessed-data'%(path))            #makedirs 创建文件时如果路径不存在会创建这个路径  
     print ("---Processed data has been save in Precessed-data ---")
     print ("---  OK  ---")
 
@@ -91,7 +91,8 @@ for file in os.listdir(path):
     	x = x-x[0]
     	#将处理后的数据重新建立一个文本存储
 
-    	Temp = open('Precessed-data/%s-Processed.txt'%(file[:-4]),'w')
+   # 	Temp = open('Precessed-data/%s-Processed.txt'%(file[:-4]),'w')#将处理后数据存储于当前程序文件夹
+    	Temp = open('%s/Precessed-data/%s-Processed.txt'%(path,file[:-4]),'w')#将处理后数据存储在目标文件夹
     	Temp.write('%s\n'%(file))
     	for u in range(len(x)):
     		Temp.write('%s,%s \n'%(x[u],y[u]))
